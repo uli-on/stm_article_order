@@ -1,0 +1,21 @@
+#@stm_ao
+#@language fr-fr
+stm_ao_article_order => Ordre (tri) des articles
+stm_ao_article_order_saved => Réorganisation d'article enregistrée.
+stm_ao_edit_article => Modifier l'article
+stm_ao_edit_image => Modifier l'image
+stm_ao_hide_articles => Masquer les articles
+stm_ao_hide_images => Cacher les images
+stm_ao_hints_for_using => Faites glisser un article vers une nouvelle position et cliquez sur "Enregistrer". <br/> En faisant glisser un article vers une autre section, vous pouvez l'assigner à cette section. <br/> Les articles ne peuvent être déplacés qu'un à la fois.
+stm_ao_it_s_the_one_above => C'EST CELUI CI-DESSUS!
+stm_ao_oops_push_it_please => OOPS! POUSSEZ-LE, S'IL VOUS PLAÎT! VOUS LE RETROUVEREZ COMME L'ARTICLE LE PLUS HAUT !
+stm_ao_optional_warnings => Si vous laissez un article aller sous la liste, faites défiler la page vers le bas pour le retrouver.
+stm_ao_prefs_h1 => Sections dans stm_article_order
+stm_ao_prefs_hint => Marquez les sections que vous ne souhaitez pas afficher dans le <a href="index.php?event=stm_article_order"> panneau Ordre (tri) des articles </a>, p. ex. ceux qui trient les articles par d'autres critères que manuellement.
+stm_ao_prefs_menuitem => stm_ao-sections
+stm_ao_prefs_pagetop => Sections dans stm_article_order
+stm_ao_save => Sauvegarder
+stm_ao_sections_updated => Sélection mise à jour
+stm_ao_show_articles => Afficher les articles
+stm_ao_show_images => Voir les images
+stm_ao_update => Mettre à jour la sélection

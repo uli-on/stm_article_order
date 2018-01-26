@@ -1,0 +1,21 @@
+#@stm_ao
+#@language de-de
+stm_ao_article_order => Artikelreihenfolge
+stm_ao_article_order_saved => Artikelreihenfolge gesichert.
+stm_ao_edit_article => Artikel bearbeiten
+stm_ao_edit_image => Bild bearbeiten
+stm_ao_hide_articles => Artikel ausblenden
+stm_ao_hide_images => Bilder ausblenden
+stm_ao_hints_for_using => Ziehen Sie einen Artikel auf eine neue Position und klicken Sie »Sichern«.<br/>Durch Ziehen in eine andere Sektion ordnen Sie einen Artikel dieser anderen Sektion zu.<br/>Es kann immer nur ein Artikel auf einmal bewegt werden.
+stm_ao_it_s_the_one_above => ES IST DER ARTIKEL OBERHALB.
+stm_ao_oops_push_it_please => UPPS! BITTE EINMAL KURZ ANSTUPSEN. DER ARTIKEL FINDET SICH DANN AM ANFANG DER SEITE.
+stm_ao_optional_warnings => Sollten Sie einen Artikel neben die Liste fallen lassen, finden Sie ihn am unteren Seitenende wieder.
+stm_ao_prefs_h1 => Sektionen in stm_article_order
+stm_ao_prefs_hint => Markieren Sie hier die Sektionen, die Sie im Fenster »<a href="index.php?event=stm_article_order">Artikelreihenfolge</a>« nicht darstellen<br/>möchten, bspw. solche, in denen Artikel nicht manuell sortiert werden sondern automatisch.
+stm_ao_prefs_menuitem => stm_ao-Sektionen
+stm_ao_prefs_pagetop => Sektionen in stm_article_order
+stm_ao_save => Sichern
+stm_ao_sections_updated => Auswahl aktualisiert
+stm_ao_show_articles => Artikel einblenden
+stm_ao_show_images => Bilder einblenden
+stm_ao_update => Auswahl aktualisieren
