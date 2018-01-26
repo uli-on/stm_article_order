@@ -1,8 +1,8 @@
-### ORIGINAL PLUGIN HELP TEXT:
+### ORIGINAL PLUGIN HELP (TEXT BY STANISLAV MÜLLER):
 
 * * *
 
-With my new Textpattern plugin you can manipulate the order of your articles and put them in different sections - by simply using Drag & Drop!
+With this Textpattern plugin you can manipulate the order of your articles and put them in different sections - by simply using Drag & Drop!
 
 ## Installation
 
