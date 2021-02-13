@@ -1,5 +1,7 @@
+#@language en, en-gb, en-us
+#@admin-side
+stm_ao_prefs_menuitem => stm_ao Settings
 #@stm_ao
-#@language en-us, en-gb
 stm_ao_article_order => Article Order
 stm_ao_article_order_saved => Article order saved.
 stm_ao_edit_article => Edit article
@@ -12,7 +14,6 @@ stm_ao_oops_push_it_please => OOPS! PUSH IT, PLEASE! YOU'LL FIND IT AS THE TOPMO
 stm_ao_optional_warnings => Should you let an article go beneath the list, scroll the page down to find it.
 stm_ao_prefs_h1 => Sections in stm_article_order
 stm_ao_prefs_hint => Mark those sections that you don't like displayed in the <a href="index.php?event=stm_article_order">Article Order panel</a>,<br />e.g. those that sort articles by other criteria than manually.
-stm_ao_prefs_menuitem => stm_ao-sections
 stm_ao_prefs_pagetop => Sections in stm_article_order
 stm_ao_save => Save
 stm_ao_sections_updated => Selection updated

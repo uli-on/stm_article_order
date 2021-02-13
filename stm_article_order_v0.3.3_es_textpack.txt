@@ -1,5 +1,7 @@
+#@language es
+#@admin-side
+stm_ao_prefs_menuitem => Opciones de stm_ao
 #@stm_ao
-#@language es-es
 stm_ao_article_order => Orden de artículos
 stm_ao_article_order_saved => Orden de artículos guardado.
 stm_ao_edit_article => Editar artículo
@@ -12,7 +14,6 @@ stm_ao_oops_push_it_please => ¡UPS! ¡EMPÚJELO POR FAVOR! ENCONTRARÁ AL ARTÍ
 stm_ao_optional_warnings => En caso de que deje “caer” a un artículo fuera de la lista, lo encontrará al final de la página, resaltado en color naranja.
 stm_ao_prefs_h1 => Secciones en stm_article_order
 stm_ao_prefs_hint => Marque las secciones que no quiere alistar en el panel “<a href="index.php?event=stm_article_order">Orden de artículos</a>”,<br />por ejemplo ésas que son ordenados de manera automática de acuerdo a otros criterios y no pueden ser ordenados manualmente.
-stm_ao_prefs_menuitem => Secciones en stm_ao
 stm_ao_prefs_pagetop => Secciones en stm_article_order
 stm_ao_save => Guardar
 stm_ao_sections_updated => Selección actualizada
