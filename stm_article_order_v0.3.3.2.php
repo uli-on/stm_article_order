@@ -54,7 +54,7 @@ $plugin['flags'] = '2';
 // #@language ISO-LANGUAGE-CODE
 // abc_string_name => Localized String
 
-$plugin['textpack'] = <<< EOT
+$plugin['textpack'] = <<<EOT
 #@language en, en-gb, en-us
 #@admin-side
 stm_ao_prefs_menuitem => stm_ao Settings
