@@ -86,43 +86,43 @@ if(@txpinterface == 'admin') {
 	add_privs('stm_article_order','1,2,3');
 	register_tab('presentation', 'stm_article_order', gTxt('stm_ao_article_order'));
 	register_callback('stm_article_order','stm_article_order');
-	
+
 	// spr_section_exclude additions
 	// with many thanks and huge ackowledgement to adi_menu from which much code has been adapted
-	
+
 	spr_section_exclude_init();
-	
+
 }
 
 function spr_section_exclude_init() {
-	
+
 	global $prefs,$event,$spr_exclude_debug,$spr_exclude_db_debug,$spr_sql_fields;
-	
+
 	if ($spr_exclude_debug) {
 		echo "spr_section_init start";
 	}
-	
+
 	$spr_section_exclude_installed = spr_section_exclude_installed();
-	
+
 	// plugin lifecycle
 	register_callback('spr_section_exclude_lifecycle','plugin_lifecycle.stm_article_order');
-	
+
 	register_callback('spr_section_exclude_install','plugin_lifecycle.stm_article_order','installed');
 	register_callback('spr_section_exclude_uninstall','plugin_lifecycle.stm_article_order', 'deleted');
 //	register_callback('my_enable_routine','plugin_lifecycle.stm_article_order', 'enabled');;
 //	register_callback('my_disable_routine','plugin_lifecycle.stm_article_order', 'disabled');
-	
+
 	// set privilege level
 	add_privs('spr_section_exclude','1,2');
-	
+
 	// add tab under Extensions
 	register_tab('extensions','spr_section_exclude',gTxt('stm_ao_prefs_menuitem'));
 	register_callback('spr_section_exclude','spr_section_exclude');
-	
+
 	// style
 	if ($event == 'spr_section_exclude')
 		register_callback('spr_section_exclude_style','admin_side','head_end');
-	
+
 }
 
 
@@ -162,8 +162,8 @@ function stm_article_order(){
 			$tmp .= '<ul class="fold">';
 			foreach($articles as $article){
 				$tmp .= sprintf('<li id="article_%d" class="article sortable">', $article['ID']);
-				
-				/* [Thanks to MattD and jens31 for the following code block that brings support for PNG + GIF thumbnails.] 
+
+				/* [Thanks to MattD and jens31 for the following code block that brings support for PNG + GIF thumbnails.]
 				By using "is_numeric" we can confirm that there is an article id and that the value in that field isn't a url or a list of ids. */
 
 				if(is_numeric($article['Image'])){
@@ -191,14 +191,14 @@ function stm_article_order(){
 	$tmp .= "</ul><p>
 	<a href='javascript:void(0);' class='artdisp-on'>".gTxt('stm_ao_show_articles')."</a><a href='javascript:void(0);' class='artdisp-off'>".gTxt('stm_ao_hide_articles')."</a><a href='javascript:void(0);' class='imgdisp-on'>".gTxt('stm_ao_show_images')."</a><a href='javascript:void(0);' class='imgdisp-off'>".gTxt('stm_ao_hide_images')."</a></p>";
 	echo $tmp;
-	
+
 	$tmp2 = sprintf('<form action="%s" method="post" class="stm_save">
 		<input type="button" class="publish" value="'.gTxt("stm_ao_save").'" name="save_navigation"/>
 		<input type="hidden" name="navigation" value="" class="array_navigation"/><br /><br />
 	</form>', $GLOBALS["_SERVER"]["REQUEST_URI"]);
 	echo $tmp2;
 	echo("</div>"); // Wrapper
-	
+
 	stm_article_order_js();
 }
 
@@ -223,7 +223,7 @@ function spr_section_exclude($event, $step) {
 	global $prefs;
 
 	$installed = spr_section_exclude_installed();
-	
+
 	if ($installed) {
 		if ($step == "update") {
 	   		pagetop(gTxt("stm_ao_prefs_pagetop"),gTxt("stm_ao_sections_updated"));
@@ -399,7 +399,7 @@ EOT;
 
 function stm_article_order_css(){
 
-echo		
+echo
 
 	'<style type="text/css" media="screen">'.n.
 '		.article_title.status_1:after {content: "'.gTxt("draft").'"}'.n.
@@ -426,13 +426,13 @@ echo <<<EOF
 			font-size: 1.05em;
             padding-left: 0 !important;
 			}
-			
+
 		.stm_save {
 			text-align: right;
 			position: relative;
 			height: 0;
 			}
-			
+
 		.publish {
 			margin-right: 0px !important;
 			text-align: center;
@@ -457,7 +457,7 @@ echo <<<EOF
 			margin-right: 10px;*/
 			margin-bottom: 1em !important;
 			}
-			
+
 
 		#navigation .section span {
 			font-weight: bold;
@@ -483,7 +483,7 @@ echo <<<EOF
 		img.article-img[src*=","], img.article-img[src*="/t."] {
 			display: none !important;
 			}
-		
+
 		em.article_id a {
 			display: inline-block !important;
 			float: left;
@@ -506,7 +506,7 @@ echo <<<EOF
             margin-bottom: 5px;
 			cursor: row-resize; /* ONCE WAS: move */
 			}
-		
+
 		li.article span.article_title:first-child {
 			padding-left: 80px;
 			}
@@ -548,13 +548,13 @@ echo <<<EOF
 			font-weight: bold;
 			text-transform: uppercase;
 			}
-		
+
 		#navigation a.sortable {
 			/* height: 30px; */
 			display: block;
 			background-color: #FFF;
 			}
-			
+
 		span.section_name + ul:empty {
 			height: 20px;
 			line-height: 20px;
@@ -571,18 +571,18 @@ echo <<<EOF
 		.hint span {
 			color:#900;
 			}
-		
+
 		.artdisp-on {
 			display: none;
 			}
-		
+
 		.artdisp-off {
 			display: inline-block;
 			}
-		
-		.imgdisp-on, 
+
+		.imgdisp-on,
 		.imgdisp-off,
-		.artdisp-on, 
+		.artdisp-on,
 		.artdisp-off {
 			margin-right: 2em;
 			}
@@ -630,30 +630,30 @@ echo <<<EOF
 			width: 251px !important;
 			float: right;
 			}
-			
+
 		li#section_drop-box span.section_name {
 			background-color: #555555;
 			}
-			
+
 		li#section_drop-box span.section_name a.toggler {
 			color: #FFFFFF;
 			}
-			
+
 		li#section_drop-box ul.sortable a {
 			background-color: #AAAAAA;
 			}
-			
+
 		li#section_drop-box li#article_098 a.sortable {
 			padding-left: 250px;
 			}
-			
+
 		li#section_drop-box li#article_098 em {
 			display: none;
 			}
 
 
 /* ################ ARTICLES DROPPED OFF THE LIST #################*/
-					
+
 		#navigation > li.article {
 			background-color: #FF9900;
 			color:#FFFFFF;
@@ -671,13 +671,13 @@ echo <<<EOF
 		#navigation > li.article span.article_title {
 			padding-left: 6px;
 			}
-		
+
 		span.article_title + ul {
 			background-color: #FF9900;
 			line-height: 20px;
 			text-indent: 6px;
 			}
-		
+
 		span.article_title + ul:after {
 			content: \"'.gTxt("stm_ao_it_s_the_one_above").'\";
 			color:#FFFFFF;
@@ -687,7 +687,7 @@ echo <<<EOF
 			margin-bottom: 5px;
 			margin-top: -5px;
 			}
-		
+
 /* ################ FAKE CATEGORY HEADINGS MADE BY HIDDEN + EXPIRED ARTICLES #################
 					Add/change to your article's IDs 		*/
 
@@ -2232,7 +2232,7 @@ $(document).ready(function() {
 // END HIDE/SHOW IMAGES/ARTICLES
 
 
-// You can link an article from the frontside to stm_article_order and have the clicked entry marked with a green dot when stm_article_order opens. 
+// You can link an article from the frontside to stm_article_order and have the clicked entry marked with a green dot when stm_article_order opens.
 //  The below code checks for a hash mark in the URL and, in case stm_article_order's article lists are collapsed, unfolds the list and scrolls down 80px for the fixed menu bar.
 	if (window.location.hash) {
 		$('.fold').css('display','block'),
