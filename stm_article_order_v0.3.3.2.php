@@ -467,17 +467,6 @@ if ($spr_exclude_debug) {
 
 // back to your usual programming
 
-
-$plugin['textpack'] = <<< EOT
-#@admin
-#@language en-gb
-abc_sample_string => Sample String
-abc_one_more => One more
-#@language de-de
-abc_sample_string => Beispieltext
-abc_one_more => Noch einer
-EOT;
-
 function stm_article_order_css(){
 
 echo
