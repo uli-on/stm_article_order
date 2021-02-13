@@ -1,7 +1,7 @@
 #@language en, en-gb, en-us
 #@admin-side
 stm_ao_prefs_menuitem => stm_ao Settings
-#@stm_ao
+#@stm_article_order
 stm_ao_article_order => Article Order
 stm_ao_article_order_saved => Article order saved.
 stm_ao_edit_article => Edit article

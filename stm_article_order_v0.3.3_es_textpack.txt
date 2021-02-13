@@ -1,7 +1,7 @@
 #@language es
 #@admin-side
 stm_ao_prefs_menuitem => Opciones de stm_ao
-#@stm_ao
+#@stm_article_order
 stm_ao_article_order => Orden de artículos
 stm_ao_article_order_saved => Orden de artículos guardado.
 stm_ao_edit_article => Editar artículo

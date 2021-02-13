@@ -1,7 +1,7 @@
 #@language de
 #@admin-side
 stm_ao_prefs_menuitem => stm_ao Einstellungen
-#@stm_ao
+#@stm_article_order
 stm_ao_article_order => Artikelreihenfolge
 stm_ao_article_order_saved => Artikelreihenfolge gesichert.
 stm_ao_edit_article => Artikel bearbeiten

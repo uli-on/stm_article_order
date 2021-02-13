@@ -80,7 +80,7 @@ stm_ao_update => Update selection
 #@language de
 #@admin-side
 stm_ao_prefs_menuitem => stm_ao Einstellungen
-#@stm_ao
+#@stm_article_order
 stm_ao_article_order => Artikelreihenfolge
 stm_ao_article_order_saved => Artikelreihenfolge gesichert.
 stm_ao_edit_article => Artikel bearbeiten
@@ -102,7 +102,7 @@ stm_ao_update => Auswahl aktualisieren
 #@language es
 #@admin-side
 stm_ao_prefs_menuitem => Opciones de stm_ao
-#@stm_ao
+#@stm_article_order
 stm_ao_article_order => Orden de artículos
 stm_ao_article_order_saved => Orden de artículos guardado.
 stm_ao_edit_article => Editar artículo
@@ -124,7 +124,7 @@ stm_ao_update => Actualizar selección
 #@language fr
 #@admin-side
 stm_ao_prefs_menuitem => Options de stm_ao
-#@stm_ao
+#@stm_article_order
 stm_ao_article_order => Ordre (tri) des articles
 stm_ao_article_order_saved => Réorganisation d’article enregistrée.
 stm_ao_edit_article => Modifier l’article
