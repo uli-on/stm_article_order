@@ -17,7 +17,7 @@ $plugin['name'] = 'stm_article_order';
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 1;
 
-$plugin['version'] = '0.3.3.2';
+$plugin['version'] = '0.3.4';
 $plugin['author'] = 'Stanislav Müller';
 $plugin['author_uri'] = 'http://lifedraft.de';
 $plugin['description'] = 'Order articles and assign them to sections by using Drag & Drop.';
@@ -54,17 +54,96 @@ $plugin['flags'] = '2';
 // #@language ISO-LANGUAGE-CODE
 // abc_string_name => Localized String
 
-/** Uncomment me, if you need a textpack
-$plugin['textpack'] = <<< EOT
-#@admin
-#@language en-gb
-abc_sample_string => Sample String
-abc_one_more => One more
-#@language de-de
-abc_sample_string => Beispieltext
-abc_one_more => Noch einer
+$plugin['textpack'] = <<<EOT
+#@language en, en-gb, en-us
+#@admin-side
+stm_ao_prefs_menuitem => stm_ao Settings
+#@stm_article_order
+stm_ao_article_order => Article Order
+stm_ao_article_order_saved => Article order saved.
+stm_ao_edit_article => Edit article
+stm_ao_edit_image => Edit image
+stm_ao_hide_articles => Hide articles
+stm_ao_hide_images => Hide images
+stm_ao_hints_for_using => Drag an article to a new position and click ”Save”.<br/>By dragging an article to another section you can assign it to that section.<br/>Articles can only be moved one at a time.
+stm_ao_it_s_the_one_above => IT’S THE ONE ABOVE!
+stm_ao_oops_push_it_please => OOPS! PUSH IT, PLEASE! YOU’LL FIND IT AS THE TOPMOST ARTICLE!
+stm_ao_optional_warnings => Should you let an article go beneath the list, scroll the page down to find it.
+stm_ao_prefs_h1 => Sections in stm_article_order
+stm_ao_prefs_hint => Mark those sections that you don’t like displayed in the <a href="index.php?event=stm_article_order">Article Order panel</a>,<br />e.g. those that sort articles by other criteria than manually.
+stm_ao_prefs_pagetop => Sections in stm_article_order
+stm_ao_save => Save
+stm_ao_sections_updated => Selection updated
+stm_ao_show_articles => Show articles
+stm_ao_show_images => Show images
+stm_ao_update => Update selection
+#@language de
+#@admin-side
+stm_ao_prefs_menuitem => stm_ao Einstellungen
+#@stm_article_order
+stm_ao_article_order => Artikelreihenfolge
+stm_ao_article_order_saved => Artikelreihenfolge gesichert.
+stm_ao_edit_article => Artikel bearbeiten
+stm_ao_edit_image => Bild bearbeiten
+stm_ao_hide_articles => Artikel ausblenden
+stm_ao_hide_images => Bilder ausblenden
+stm_ao_hints_for_using => Ziehen Sie einen Artikel auf eine neue Position und klicken Sie »Sichern«.<br/>Durch Ziehen in eine andere Sektion ordnen Sie einen Artikel dieser anderen Sektion zu.<br/>Es kann immer nur ein Artikel auf einmal bewegt werden.
+stm_ao_it_s_the_one_above => ES IST DER ARTIKEL OBERHALB.
+stm_ao_oops_push_it_please => UPPS! BITTE EINMAL KURZ ANSTUPSEN. DER ARTIKEL FINDET SICH DANN AM ANFANG DER SEITE.
+stm_ao_optional_warnings => Sollten Sie einen Artikel neben die Liste fallen lassen, finden Sie ihn am unteren Seitenende wieder.
+stm_ao_prefs_h1 => Sektionen in stm_article_order
+stm_ao_prefs_hint => Markieren Sie hier die Sektionen, die Sie im Fenster »<a href="index.php?event=stm_article_order">Artikelreihenfolge</a>« nicht darstellen<br/>möchten, bspw. solche, in denen Artikel nicht manuell sortiert werden sondern automatisch.
+stm_ao_prefs_pagetop => Sektionen in stm_article_order
+stm_ao_save => Sichern
+stm_ao_sections_updated => Auswahl aktualisiert
+stm_ao_show_articles => Artikel einblenden
+stm_ao_show_images => Bilder einblenden
+stm_ao_update => Auswahl aktualisieren
+#@language es
+#@admin-side
+stm_ao_prefs_menuitem => Opciones de stm_ao
+#@stm_article_order
+stm_ao_article_order => Orden de artículos
+stm_ao_article_order_saved => Orden de artículos guardado.
+stm_ao_edit_article => Editar artículo
+stm_ao_edit_image => Editar imagen
+stm_ao_hide_articles => Ocultar artículos
+stm_ao_hide_images => Ocultar imágenes
+stm_ao_hints_for_using => Arrastre un artículo hacia una nueva posición y pulse “guardar”.<br/>Al arrastrar a un artículo hacia una nueva sección lo asigna a esa nueva sección.<br/>Puede arrastrar un sólo artículo a la vez.
+stm_ao_it_s_the_one_above => ¡ES EL ARTÍCULO DE ARRIBA!
+stm_ao_oops_push_it_please => ¡UPS! ¡EMPÚJELO POR FAVOR! ENCONTRARÁ AL ARTÍCULO AL TOPE DE LA PÁGINA.
+stm_ao_optional_warnings => En caso de que deje “caer” a un artículo fuera de la lista, lo encontrará al final de la página, resaltado en color naranja.
+stm_ao_prefs_h1 => Secciones en stm_article_order
+stm_ao_prefs_hint => Marque las secciones que no quiere alistar en el panel “<a href="index.php?event=stm_article_order">Orden de artículos</a>”,<br />por ejemplo ésas que son ordenados de manera automática de acuerdo a otros criterios y no pueden ser ordenados manualmente.
+stm_ao_prefs_pagetop => Secciones en stm_article_order
+stm_ao_save => Guardar
+stm_ao_sections_updated => Selección actualizada
+stm_ao_show_articles => Mostrar artículos
+stm_ao_show_images => Mostrar imágenes
+stm_ao_update => Actualizar selección
+#@language fr
+#@admin-side
+stm_ao_prefs_menuitem => Options de stm_ao
+#@stm_article_order
+stm_ao_article_order => Ordre (tri) des articles
+stm_ao_article_order_saved => Réorganisation d’article enregistrée.
+stm_ao_edit_article => Modifier l’article
+stm_ao_edit_image => Modifier l’image
+stm_ao_hide_articles => Masquer les articles
+stm_ao_hide_images => Cacher les images
+stm_ao_hints_for_using => Faites glisser un article vers une nouvelle position et cliquez sur "Enregistrer". <br/> En faisant glisser un article vers une autre section, vous pouvez l’assigner à cette section. <br/> Les articles ne peuvent être déplacés qu’un à la fois.
+stm_ao_it_s_the_one_above => C’EST CELUI CI-DESSUS!
+stm_ao_oops_push_it_please => OOPS! POUSSEZ-LE, S’IL VOUS PLAÎT! VOUS LE RETROUVEREZ COMME L’ARTICLE LE PLUS HAUT !
+stm_ao_optional_warnings => Si vous laissez un article aller sous la liste, faites défiler la page vers le bas pour le retrouver.
+stm_ao_prefs_h1 => Sections dans stm_article_order
+stm_ao_prefs_hint => Marquez les sections que vous ne souhaitez pas afficher dans le <a href="index.php?event=stm_article_order"> panneau Ordre (tri) des articles </a>, p. ex. ceux qui trient les articles par d’autres critères que manuellement.
+stm_ao_prefs_pagetop => Sections dans stm_article_order
+stm_ao_save => Sauvegarder
+stm_ao_sections_updated => Sélection mise à jour
+stm_ao_show_articles => Afficher les articles
+stm_ao_show_images => Voir les images
+stm_ao_update => Mettre à jour la sélection
 EOT;
-**/
 // End of textpack
 
 if (!defined('txpinterface'))
@@ -86,43 +165,43 @@ if(@txpinterface == 'admin') {
 	add_privs('stm_article_order','1,2,3');
 	register_tab('presentation', 'stm_article_order', gTxt('stm_ao_article_order'));
 	register_callback('stm_article_order','stm_article_order');
-	
+
 	// spr_section_exclude additions
 	// with many thanks and huge ackowledgement to adi_menu from which much code has been adapted
-	
+
 	spr_section_exclude_init();
-	
+
 }
 
 function spr_section_exclude_init() {
-	
+
 	global $prefs,$event,$spr_exclude_debug,$spr_exclude_db_debug,$spr_sql_fields;
-	
+
 	if ($spr_exclude_debug) {
 		echo "spr_section_init start";
 	}
-	
+
 	$spr_section_exclude_installed = spr_section_exclude_installed();
-	
+
 	// plugin lifecycle
 	register_callback('spr_section_exclude_lifecycle','plugin_lifecycle.stm_article_order');
-	
+
 	register_callback('spr_section_exclude_install','plugin_lifecycle.stm_article_order','installed');
 	register_callback('spr_section_exclude_uninstall','plugin_lifecycle.stm_article_order', 'deleted');
 //	register_callback('my_enable_routine','plugin_lifecycle.stm_article_order', 'enabled');;
 //	register_callback('my_disable_routine','plugin_lifecycle.stm_article_order', 'disabled');
-	
+
 	// set privilege level
 	add_privs('spr_section_exclude','1,2');
-	
+
 	// add tab under Extensions
 	register_tab('extensions','spr_section_exclude',gTxt('stm_ao_prefs_menuitem'));
 	register_callback('spr_section_exclude','spr_section_exclude');
-	
+
 	// style
 	if ($event == 'spr_section_exclude')
 		register_callback('spr_section_exclude_style','admin_side','head_end');
-	
+
 }
 
 
@@ -133,10 +212,12 @@ function stm_article_order(){
 	$tmp = "<div id='wrapper'><h1>".gTxt('stm_ao_article_order')."</h1> <!-- <p class='hint'>".gTxt('stm_ao_hints_for_using')." --> <!-- <br /><span>".gTxt('stm_ao_optional_warnings')."</span></p> --> ";
 
 	if($navigation = gps("navigation")){
-		parse_str($navigation);
-		foreach($navigation as $section => $children){
-			foreach($children as $position => $ID){
-				safe_update("textpattern", "position = $position, Section = '$section'", "ID = $ID");
+		parse_str($navigation, $nav);
+		foreach ($nav as $arr) {
+			foreach($arr as $section => $children){
+				foreach($children as $position => $ID){
+					safe_update("textpattern", "position = $position, Section = '$section'", "ID = $ID");
+				}
 			}
 		}
 		$tmp .= '<div id="messagepane"><span class="messageflash success" id="message"><span class="ui-icon ui-icon-check"></span> '.gTxt("stm_ao_article_order_saved").'<a class="close" href="#close" title="'.gTxt("close").'">×</a></span></div>';
@@ -162,8 +243,8 @@ function stm_article_order(){
 			$tmp .= '<ul class="fold">';
 			foreach($articles as $article){
 				$tmp .= sprintf('<li id="article_%d" class="article sortable">', $article['ID']);
-				
-				/* [Thanks to MattD and jens31 for the following code block that brings support for PNG + GIF thumbnails.] 
+
+				/* [Thanks to MattD and jens31 for the following code block that brings support for PNG + GIF thumbnails.]
 				By using "is_numeric" we can confirm that there is an article id and that the value in that field isn't a url or a list of ids. */
 
 				if(is_numeric($article['Image'])){
@@ -191,14 +272,14 @@ function stm_article_order(){
 	$tmp .= "</ul><p>
 	<a href='javascript:void(0);' class='artdisp-on'>".gTxt('stm_ao_show_articles')."</a><a href='javascript:void(0);' class='artdisp-off'>".gTxt('stm_ao_hide_articles')."</a><a href='javascript:void(0);' class='imgdisp-on'>".gTxt('stm_ao_show_images')."</a><a href='javascript:void(0);' class='imgdisp-off'>".gTxt('stm_ao_hide_images')."</a></p>";
 	echo $tmp;
-	
+
 	$tmp2 = sprintf('<form action="%s" method="post" class="stm_save">
 		<input type="button" class="publish" value="'.gTxt("stm_ao_save").'" name="save_navigation"/>
 		<input type="hidden" name="navigation" value="" class="array_navigation"/><br /><br />
 	</form>', $GLOBALS["_SERVER"]["REQUEST_URI"]);
 	echo $tmp2;
 	echo("</div>"); // Wrapper
-	
+
 	stm_article_order_js();
 }
 
@@ -223,7 +304,7 @@ function spr_section_exclude($event, $step) {
 	global $prefs;
 
 	$installed = spr_section_exclude_installed();
-	
+
 	if ($installed) {
 		if ($step == "update") {
 	   		pagetop(gTxt("stm_ao_prefs_pagetop"),gTxt("stm_ao_sections_updated"));
@@ -386,20 +467,9 @@ if ($spr_exclude_debug) {
 
 // back to your usual programming
 
-
-$plugin['textpack'] = <<< EOT
-#@admin
-#@language en-gb
-abc_sample_string => Sample String
-abc_one_more => One more
-#@language de-de
-abc_sample_string => Beispieltext
-abc_one_more => Noch einer
-EOT;
-
 function stm_article_order_css(){
 
-echo		
+echo
 
 	'<style type="text/css" media="screen">'.n.
 '		.article_title.status_1:after {content: "'.gTxt("draft").'"}'.n.
@@ -426,13 +496,13 @@ echo <<<EOF
 			font-size: 1.05em;
             padding-left: 0 !important;
 			}
-			
+
 		.stm_save {
 			text-align: right;
 			position: relative;
 			height: 0;
 			}
-			
+
 		.publish {
 			margin-right: 0px !important;
 			text-align: center;
@@ -457,7 +527,7 @@ echo <<<EOF
 			margin-right: 10px;*/
 			margin-bottom: 1em !important;
 			}
-			
+
 
 		#navigation .section span {
 			font-weight: bold;
@@ -483,7 +553,7 @@ echo <<<EOF
 		img.article-img[src*=","], img.article-img[src*="/t."] {
 			display: none !important;
 			}
-		
+
 		em.article_id a {
 			display: inline-block !important;
 			float: left;
@@ -506,7 +576,7 @@ echo <<<EOF
             margin-bottom: 5px;
 			cursor: row-resize; /* ONCE WAS: move */
 			}
-		
+
 		li.article span.article_title:first-child {
 			padding-left: 80px;
 			}
@@ -548,13 +618,13 @@ echo <<<EOF
 			font-weight: bold;
 			text-transform: uppercase;
 			}
-		
+
 		#navigation a.sortable {
 			/* height: 30px; */
 			display: block;
 			background-color: #FFF;
 			}
-			
+
 		span.section_name + ul:empty {
 			height: 20px;
 			line-height: 20px;
@@ -571,18 +641,18 @@ echo <<<EOF
 		.hint span {
 			color:#900;
 			}
-		
+
 		.artdisp-on {
 			display: none;
 			}
-		
+
 		.artdisp-off {
 			display: inline-block;
 			}
-		
-		.imgdisp-on, 
+
+		.imgdisp-on,
 		.imgdisp-off,
-		.artdisp-on, 
+		.artdisp-on,
 		.artdisp-off {
 			margin-right: 2em;
 			}
@@ -609,20 +679,17 @@ echo <<<EOF
 			}
 		.article_title:not(.status_4):not(.status_5) {opacity: .5}
 
-		/* Left in place, maybe necessary in TXP versions < 4.7
-		#messagepane {
-			left: 43.8%;
-			position: fixed;
-			bottom: 0 !important;
-			} */
 		.close { text-align: center; }
 
-		#sortHelper { background-color: #D8FA02;
+		#sortHelper {
+			background-color: #D8FA02;
+			background-color: var(--clr-bkgd);
 			border-bottom: 5px solid #fff;
-			}
+			border-bottom-color: var(--clr-bkgd);
+		}
 
-/* ######################### DROPBOX ############################*/		
-			
+/* ######################### DROPBOX ############################*/
+
 		li#section_drop-box {
 			position: fixed;
 			left: 70%;
@@ -630,30 +697,30 @@ echo <<<EOF
 			width: 251px !important;
 			float: right;
 			}
-			
+
 		li#section_drop-box span.section_name {
 			background-color: #555555;
 			}
-			
+
 		li#section_drop-box span.section_name a.toggler {
 			color: #FFFFFF;
 			}
-			
+
 		li#section_drop-box ul.sortable a {
 			background-color: #AAAAAA;
 			}
-			
+
 		li#section_drop-box li#article_098 a.sortable {
 			padding-left: 250px;
 			}
-			
+
 		li#section_drop-box li#article_098 em {
 			display: none;
 			}
 
 
 /* ################ ARTICLES DROPPED OFF THE LIST #################*/
-					
+
 		#navigation > li.article {
 			background-color: #FF9900;
 			color:#FFFFFF;
@@ -671,13 +738,13 @@ echo <<<EOF
 		#navigation > li.article span.article_title {
 			padding-left: 6px;
 			}
-		
+
 		span.article_title + ul {
 			background-color: #FF9900;
 			line-height: 20px;
 			text-indent: 6px;
 			}
-		
+
 		span.article_title + ul:after {
 			content: \"'.gTxt("stm_ao_it_s_the_one_above").'\";
 			color:#FFFFFF;
@@ -687,7 +754,7 @@ echo <<<EOF
 			margin-bottom: 5px;
 			margin-top: -5px;
 			}
-		
+
 /* ################ FAKE CATEGORY HEADINGS MADE BY HIDDEN + EXPIRED ARTICLES #################
 					Add/change to your article's IDs 		*/
 
@@ -2232,7 +2299,7 @@ $(document).ready(function() {
 // END HIDE/SHOW IMAGES/ARTICLES
 
 
-// You can link an article from the frontside to stm_article_order and have the clicked entry marked with a green dot when stm_article_order opens. 
+// You can link an article from the frontside to stm_article_order and have the clicked entry marked with a green dot when stm_article_order opens.
 //  The below code checks for a hash mark in the URL and, in case stm_article_order's article lists are collapsed, unfolds the list and scrolls down 80px for the fixed menu bar.
 	if (window.location.hash) {
 		$('.fold').css('display','block'),
@@ -2254,90 +2321,114 @@ if (0) {
 ?>
 <!--
 # --- BEGIN PLUGIN HELP ---
-<h3>ORIGINAL PLUGIN HELP TEXT:</h3>
-<hr /><br />
-<p>With my new Textpattern plugin you can manipulate the order of your articles and put them in different sections - by simply using Drag & Drop!</p>
+h1. stm_article_order
 
-<h2>Installation</h2>
+This plugin allows you to change the order of articles within a section and to switch articles between sections by drag and drop.
 
-<p>You should use at least Textpattern 4.0.5 for working with this plugin.</p>
+It provides a corresponding @position@ field for outputting the articles in the corresponding order.
 
-<p>After activating the plugin, you will see a new admin tab at "presentation » navigation". Using this menu, you can manipulate the navigation of your website with ease!</p>
 
-<p>As a last step of the installation you?ll have to add the follwing attribute to your txp:article tag:</p>
+h2. Installation
 
-<p><code>&lt;txp:article sort=&quot;position asc&quot; /&gt;</code></p>
+Drag the .php file into _Admin › Plugins › File upload_ or paste the installer txt file into the field provided.
 
-<p>For "non-blog-sites" we also recommend the  <a href="http://textpattern.org/plugins/206/rdt_dynamenus" >rdt_dynamenus</a> plugin. Using this, you should add the following attribute:</p>
+This plugin requires at least Textpattern 4.5 and has been tested with up to Textpattern 4.8.5 and PHP 8.
 
-<p><code>&lt;txp:rdt_article_menu sortby=&quot;position&quot; sortdir=&quot;asc&quot; /&gt;</code><br /><br /><br /></p>
 
-<h3>CHANGES BY ULI:</h3>
-<hr />
-<br />
+h2. Usage : admin side
 
-<p style="font-weight:bold">Changes in v0.2.4</p>
-<ul>
-<li>Added two links for folding articles as another means of making the list more manageable. As before, you can expand single sections by clicking their title bars.</li>
-<li>Fixed a CSS-bug with the Vanilla Remora stylesheet, that didn't let you select menu items on the stm_ao page, a flaw I introduced in v0.2.3 by positioning the #wrapper div.</li>
-</ul>
+After activating the plugin, you will see a new admin tab at "Presentation » Article Order". Using this menu, you can re-arrange the order of your articles within a section, or drag them between sections!
 
-<p style="font-weight:bold">Changes in v0.2.3</p>
-<ul>
-<li>Added links for toggling image display, above and below the articles list</li>
-<li>Toggle status is saved to a cookie</li>
-<li>Articles without images don't show a "missing image" icon any more (Thanks, MattD)</li>
-<li>Article status is addressable via CSS class "status_<em>n</em>", where n is a number between 1 and 5</li>
-<li>Cleaned up the alignment of IDs and titles (Thanks, RedFox)</li>
-<li>Introduced a Drop Box for parking articles you want to move to a section several screen heights above or below its origin with as little steps as possible</li>
-</ul>
-<br />
-<p><strong>The Drop Box</strong> is an experiment. It's a section on a fixed position, nothing more and nothing less. I'm not sure how usable it is, especially with hundreds and thousands of articles. I simply don't have that much articles to test with, hence please decide for yourself.</p>
-<br />
-<p><strong>Preparing the Drop Box: </strong></p>
-<ol>
-<li>Create a section that's exactly named "drop-box". (Remove that section from any navs and lists it might appear in.)</li>
-<li>Next, create an indicator for successful dropping with a little note on it, by saving an article of hidden type to your drop-box section. Title it e.g. "Let go when upper bar is shifted up".</li>
-<li>Look for the article's ID, and, in the plugin's CSS, replace the two instances of "098" with this ID. </li>
-</ol>
-<p>That's it, you can now try out the Drop Box. </p>
+In the _Extensions › stm_ao Settings_ panel, you can exclude certain sections from the Article Order pane.
 
-<p><strong>Using the Drop Box: </strong>It's easier dropping articles onto the Drop Box from above, so scroll down as deep as the article involved allows you to and drop the article above the Drop Box. Yes, the best place is above the Drop Box, <em>not</em> immediately thereupon.<br />
-Dragging from the last section it sometimes seems impossible to get the dropping indicator to move. If that happens simply let the article go so it lands beside the drop box at the bottom of the list, now labelled with an orange color. It's quite easy to move it over to the Drop Box from there: grab it and hold it, even if you can't see it any more, and, when the Drop Box reacts, let it go.<br />
+h2. Usage : front end tags
+
+To output your articles in the order set on the admin side, use @position@ in the @sort@ attribute of txp:article or txp:article_custom.
+
+For example:
+
+bc. <txp:article sort="position asc" />
+
+The sort attribute can also be used with "rdt_dynamenus":http://textpattern.org/plugins/206/rdt_dynamenus plugin but here the attributes are named slightly differently:
+
+bc. <txp:rdt_article_menu sortby="position" sortdir="asc" />
+
+
+h2. Using a “Drop Box”
+
+*The Drop Box* is an experiment. It's a section on a fixed position, nothing more and nothing less. I'm not sure how usable it is, especially with hundreds and thousands of articles. I simply don't have that much articles to test with, hence please decide for yourself.
+
+h3. Preparing the Drop Box
+
+# Create a section named @drop-box@. Make sure to exclude it from any section_list tags for menus or navigation.
+# Next, create a new article in that section, set it to @Status: hidden@ and give it a title like "Let go when upper bar is shifted up". Publish the article.
+# Note the article's ID number, then visit the plugin code and search for the two instances of @098@ in the CSS. Insert your own article's ID number in its place. Save the changes to the plugin.
+
+Now you are ready to use the Drop Box.
+
+h3. Using the Drop Box
+
+It's easier to drop articles onto the Drop Box from above, so scroll down as deep as the article involved allows you to and drop the article above the Drop Box. Yes, the best place is above the Drop Box, _not_ immediately thereon.
+
+Dragging from the last section it sometimes seems impossible to get the dropping indicator to move. If that happens simply let the article go so it lands beside the drop box at the bottom of the list, now labelled orange. It's quite easy to move it over to the Drop Box from there: grab it and hold it, even if you can't see it any more, and, when the Drop Box reacts, let it go.
 Now scroll to your destination section and drag the article from the Drop Box over to the section list. I've noticed that moving a parked article into its destination section seems more difficult the deeper you have scrolled on the page, because the deeper you are the wider seems the gap between the article and your pointer while dragging. No idea how to fix this, but it helps to leave some room below the window so your pointer can leave it (try, you'll see what I mean).
-<br />
-<br />There might be some special cases where it seemed a little challenging to work with the Drop Box, but with a little patience I always succeeded. It might depend on my small amount of articles, though.<br />
-<br /><strong>Eliminating the Drop Box: </strong>Just delete its section and, in order to move the article list back to the center, remove one declaration in the plugin's CSS: <br />
-<code>left: -12%;</code> in the <code>#wrapper</code> block.</p>
+There might be some special cases where it seemed a little challenging to work with the Drop Box, but with a little patience I always succeeded.
 
-<p style="font-weight:bold">Changes in v0.2.2</p>
-<ul>
-<li><span style="text-decoration:line-through">Image</span> JPEG support: Shows the article’s thumbnail. (Image display and multiple images in the article image field are mutually exclusive.)</li>
-<li>Added image edit link (click the image)</li>
-<li>Added article edit link (click the ID)</li>
-<li>Displays section titles instead of section names</li>
-<li>Sections are now ordered by title</li>
-</ul>
-<p>Hint: If you want the ID back where it was in v0.2.1, simply delete the float rule for <code>em.article_id a</code></p>
+h3. Removing the Drop Box
 
-<p style="font-weight:bold">Changes in v0.2.1</p>
-<ul></li>
-<li>Created an extended bottom area to each section (actually to the last article) so articles don’t slip into Nirvana so easily when you drop them slightly below a section’s last article.</li>
-<li>Now one pull suffices where two steps and good thinking were needed before (if you wanted to move an article to the last position).</li>
-<li>If you still succeed in dropping an article beside the list (and it is possible), an animation and two advisory notes call your attention and help you get the article onto the desired position. (The first one uses child selector and sibling combinator (IE7+), the text is created by a :before pseudo element that’s known to be unknown to even IE7, but at least color and animation should be visible there.)</li>
-<li>Made it a one column design in order to avoid bumpy behavior while pulling articles and toggling sections.</li>
-<li>The predictable longer list got a second Save button at the top of the page.</li>
-<li>My clients did look for titles not IDs, so I put the ID from the beginning to the end of the line and made it oblique.</li>
-<li>Left intentionally: Styles for “fake category headings” (look for this phrase in the plugin’s CSS section in order to use those). It’s the darker grey bars in the topmost screenshot of <a href="http://forum.textpattern.com/viewtopic.php?pid=235775#p235775">my announcement post</a>. I made some of these from empty hidden articles. They simply remind to keep together blocks of articles of the same category. Especially expedient when you use if_different.</li>
-</ul>
-<br />
-<h3>CHANGES BY SPRINGWORKS</h3>
-<hr />
-<br />
+Just delete its section and to move the article list back to the center, remove one declaration in the plugin's CSS:
+@left: -12%;@ in the @#wrapper@ block.
 
-<p style="font-weight:bold">Changes in v0.3</p>
-<p>Added tab under Extensions to enable selection of sections to be excluded from Article Order tab under Presentations. To support this functionality, an extra column is added to the txp_section table in the database. This is achieved using plugin lifecycle events so the requirement for this version of the plugin has risen to TXP 4.5 or higher.</p>
-<p>Much of the additional functionality has been created by borrowing large blocks of code from adi_menu and freely adapting it. Many thanks are due to Adi Gilbert for his unknowing assistance in me being able to extend this plugin!</p>
+
+h2. Changelog + Credits
+
+h3. Changelog
+
+*Changes in v0.3.4 – 13 Feb 2021 – jcr*
+
+* Minor parse_str() fix for Textpattern 4.8.5 and PHP 7.4+ / PHP 8
+* Incorporated textpacks in plugin with menu item fix.
+
+*Changes in v0.3 – Springworks*
+
+* Added tab under Extensions to enable selection of sections to be excluded from Article Order tab under Presentations. To support this functionality, an extra column is added to the txp_section table in the database. This is achieved using plugin lifecycle events so the requirement for this version of the plugin has risen to TXP 4.5 or higher.<br>
+Much of the additional functionality has been created by borrowing large blocks of code from adi_menu and freely adapting it. Many thanks are due to Adi Gilbert for his unknowing assistance in me being able to extend this plugin!
+
+
+*Changes in v0.2.4 – Uli*
+
+* Added two links for folding articles as another means of making the list more manageable. As before, you can expand single sections by clicking their title bars.
+* Fixed a CSS-bug with the Vanilla Remora stylesheet, that didn't let you select menu items on the stm_ao page, a flaw I introduced in v0.2.3 by positioning the #wrapper div.
+
+*Changes in v0.2.3 – Uli*
+
+* Added links for toggling image display, above and below the articles list
+* Toggle status is saved to a cookie
+* Articles without images don't show a "missing image" icon any more (Thanks, MattD)
+* Article status is addressable via CSS class "status__n_", where n is a number between 1 and 5
+* Cleaned up the alignment of IDs and titles (Thanks, RedFox)
+* Introduced a Drop Box for parking articles you want to move to a section several screen heights above or below its origin with as little steps as possible
+
+*Changes in v0.2.2 – Uli*
+
+* Image JPEG support: Shows the article’s thumbnail. (Image display and multiple images in the article image field are mutually exclusive.)
+* Added image edit link (click the image)
+* Added article edit link (click the ID)
+* Displays section titles instead of section names
+* Sections are now ordered by title
+
+Hint: If you want the ID back where it was in v0.2.1, simply delete the float rule for @em.article_id a@
+
+*Changes in v0.2.1 – Uli*
+
+* Created an extended bottom area to each section (actually to the last article) so articles don’t slip into Nirvana so easily when you drop them slightly below a section’s last article.
+* Now one pull suffices where two steps and good thinking were needed before (if you wanted to move an article to the last position).
+* If you still succeed in dropping an article beside the list (and it is possible), an animation and two advisory notes call your attention and help you get the article onto the desired position. (The first one uses child selector and sibling combinator (IE7+), the text is created by a :before pseudo element that’s known to be unknown to even IE7, but at least color and animation should be visible there.)
+* Made it a one column design in order to avoid bumpy behaviour while pulling articles and toggling sections.
+* The predictable longer list got a second Save button at the top of the page.
+* My clients did look for titles not IDs, so I put the ID from the beginning to the end of the line and made it oblique.
+* Left intentionally: Styles for “fake category headings” (look for this phrase in the plugin’s CSS section in order to use those). It’s the darker grey bars in the topmost screenshot of "my announcement post":http://forum.textpattern.com/viewtopic.php?pid=235775#p235775. I made some of these from empty hidden articles. They simply remind to keep together blocks of articles of the same category. Especially expedient when you use if_different.
+
 # --- END PLUGIN HELP ---
 -->
 <?php
