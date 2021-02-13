@@ -611,20 +611,17 @@ echo <<<EOF
 			}
 		.article_title:not(.status_4):not(.status_5) {opacity: .5}
 
-		/* Left in place, maybe necessary in TXP versions < 4.7
-		#messagepane {
-			left: 43.8%;
-			position: fixed;
-			bottom: 0 !important;
-			} */
 		.close { text-align: center; }
 
-		#sortHelper { background-color: #D8FA02;
+		#sortHelper {
+			background-color: #D8FA02;
+			background-color: var(--clr-bkgd);
 			border-bottom: 5px solid #fff;
-			}
+			border-bottom-color: var(--clr-bkgd);
+		}
 
-/* ######################### DROPBOX ############################*/		
-			
+/* ######################### DROPBOX ############################*/
+
 		li#section_drop-box {
 			position: fixed;
 			left: 70%;
