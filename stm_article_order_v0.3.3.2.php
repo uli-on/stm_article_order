@@ -133,10 +133,12 @@ function stm_article_order(){
 	$tmp = "<div id='wrapper'><h1>".gTxt('stm_ao_article_order')."</h1> <!-- <p class='hint'>".gTxt('stm_ao_hints_for_using')." --> <!-- <br /><span>".gTxt('stm_ao_optional_warnings')."</span></p> --> ";
 
 	if($navigation = gps("navigation")){
-		parse_str($navigation);
-		foreach($navigation as $section => $children){
-			foreach($children as $position => $ID){
-				safe_update("textpattern", "position = $position, Section = '$section'", "ID = $ID");
+		parse_str($navigation, $nav);
+		foreach ($nav as $arr) {
+			foreach($arr as $section => $children){
+				foreach($children as $position => $ID){
+					safe_update("textpattern", "position = $position, Section = '$section'", "ID = $ID");
+				}
 			}
 		}
 		$tmp .= '<div id="messagepane"><span class="messageflash success" id="message"><span class="ui-icon ui-icon-check"></span> '.gTxt("stm_ao_article_order_saved").'<a class="close" href="#close" title="'.gTxt("close").'">×</a></span></div>';
