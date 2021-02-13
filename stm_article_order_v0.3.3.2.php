@@ -17,7 +17,7 @@ $plugin['name'] = 'stm_article_order';
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 1;
 
-$plugin['version'] = '0.3.3.2';
+$plugin['version'] = '0.3.4';
 $plugin['author'] = 'Stanislav Müller';
 $plugin['author_uri'] = 'http://lifedraft.de';
 $plugin['description'] = 'Order articles and assign them to sections by using Drag & Drop.';
