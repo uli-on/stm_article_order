@@ -2332,23 +2332,46 @@ if (0) {
 ?>
 <!--
 # --- BEGIN PLUGIN HELP ---
-<h3>ORIGINAL PLUGIN HELP TEXT:</h3>
+<h2>stm_article_order</h2>
+<p></em>(Original plugin help by Stanislav Müller)</em></p>
 <hr /><br />
-<p>With my new Textpattern plugin you can manipulate the order of your articles and put them in different sections - by simply using Drag & Drop!</p>
+<p>With my new Textpattern plugin you can manipulate the order of your articles and put them in different sections - by simply using drag & drop!</p>
 
 <h2>Installation</h2>
 
-<p>You should use at least Textpattern 4.0.5 for working with this plugin.</p>
+<p>You should use at least Textpattern 4.5 for working with this plugin.</p>
 
-<p>After activating the plugin, you will see a new admin tab at "presentation » navigation". Using this menu, you can manipulate the navigation of your website with ease!</p>
+<p>After activating the plugin, you will see a new admin tab at "Presentation » Article Order". Using this menu, you can manipulate the navigation of your website with ease!</p>
 
-<p>As a last step of the installation you?ll have to add the follwing attribute to your txp:article tag:</p>
+<p>As a last step of the installation you’ll have to add the following attribute to your txp:article tag:</p>
 
 <p><code>&lt;txp:article sort=&quot;position asc&quot; /&gt;</code></p>
 
 <p>For "non-blog-sites" we also recommend the  <a href="http://textpattern.org/plugins/206/rdt_dynamenus" >rdt_dynamenus</a> plugin. Using this, you should add the following attribute:</p>
 
 <p><code>&lt;txp:rdt_article_menu sortby=&quot;position&quot; sortdir=&quot;asc&quot; /&gt;</code><br /><br /><br /></p>
+
+<h3>CHANGES BY JCR:</h3>
+<hr />
+<br />
+
+<p style="font-weight:bold">Changes in v0.3.4 – 13 Feb 2021</p>
+<ul>
+<li>Minor parse_str() fix for Textpattern 4.8.5 and PHP 7.4+ / PHP 8</li>
+<li>Incorporated textpacks in plugin with menu item fix.</li>
+</ul>
+
+<br />
+<h3>CHANGES BY SPRINGWORKS</h3>
+<hr />
+<br />
+
+<p style="font-weight:bold">Changes in v0.3</p>
+
+<ul>
+<li>Added tab under Extensions to enable selection of sections to be excluded from Article Order tab under Presentations. To support this functionality, an extra column is added to the txp_section table in the database. This is achieved using plugin lifecycle events so the requirement for this version of the plugin has risen to TXP 4.5 or higher.<br>
+Much of the additional functionality has been created by borrowing large blocks of code from adi_menu and freely adapting it. Many thanks are due to Adi Gilbert for his unknowing assistance in me being able to extend this plugin!</li>
+</ul>
 
 <h3>CHANGES BY ULI:</h3>
 <hr />
@@ -2408,14 +2431,7 @@ Now scroll to your destination section and drag the article from the Drop Box ov
 <li>My clients did look for titles not IDs, so I put the ID from the beginning to the end of the line and made it oblique.</li>
 <li>Left intentionally: Styles for “fake category headings” (look for this phrase in the plugin’s CSS section in order to use those). It’s the darker grey bars in the topmost screenshot of <a href="http://forum.textpattern.com/viewtopic.php?pid=235775#p235775">my announcement post</a>. I made some of these from empty hidden articles. They simply remind to keep together blocks of articles of the same category. Especially expedient when you use if_different.</li>
 </ul>
-<br />
-<h3>CHANGES BY SPRINGWORKS</h3>
-<hr />
-<br />
 
-<p style="font-weight:bold">Changes in v0.3</p>
-<p>Added tab under Extensions to enable selection of sections to be excluded from Article Order tab under Presentations. To support this functionality, an extra column is added to the txp_section table in the database. This is achieved using plugin lifecycle events so the requirement for this version of the plugin has risen to TXP 4.5 or higher.</p>
-<p>Much of the additional functionality has been created by borrowing large blocks of code from adi_menu and freely adapting it. Many thanks are due to Adi Gilbert for his unknowing assistance in me being able to extend this plugin!</p>
 # --- END PLUGIN HELP ---
 -->
 <?php
