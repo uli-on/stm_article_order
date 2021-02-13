@@ -54,17 +54,96 @@ $plugin['flags'] = '2';
 // #@language ISO-LANGUAGE-CODE
 // abc_string_name => Localized String
 
-/** Uncomment me, if you need a textpack
 $plugin['textpack'] = <<< EOT
-#@admin
-#@language en-gb
-abc_sample_string => Sample String
-abc_one_more => One more
-#@language de-de
-abc_sample_string => Beispieltext
-abc_one_more => Noch einer
+#@language en, en-gb, en-us
+#@admin-side
+stm_ao_prefs_menuitem => stm_ao Settings
+#@stm_ao
+stm_ao_article_order => Article Order
+stm_ao_article_order_saved => Article order saved.
+stm_ao_edit_article => Edit article
+stm_ao_edit_image => Edit image
+stm_ao_hide_articles => Hide articles
+stm_ao_hide_images => Hide images
+stm_ao_hints_for_using => Drag an article to a new position and click ”Save”.<br/>By dragging an article to another section you can assign it to that section.<br/>Articles can only be moved one at a time.
+stm_ao_it_s_the_one_above => IT’S THE ONE ABOVE!
+stm_ao_oops_push_it_please => OOPS! PUSH IT, PLEASE! YOU’LL FIND IT AS THE TOPMOST ARTICLE!
+stm_ao_optional_warnings => Should you let an article go beneath the list, scroll the page down to find it.
+stm_ao_prefs_h1 => Sections in stm_article_order
+stm_ao_prefs_hint => Mark those sections that you don’t like displayed in the <a href="index.php?event=stm_article_order">Article Order panel</a>,<br />e.g. those that sort articles by other criteria than manually.
+stm_ao_prefs_pagetop => Sections in stm_article_order
+stm_ao_save => Save
+stm_ao_sections_updated => Selection updated
+stm_ao_show_articles => Show articles
+stm_ao_show_images => Show images
+stm_ao_update => Update selection
+#@language de
+#@admin-side
+stm_ao_prefs_menuitem => stm_ao Einstellungen
+#@stm_ao
+stm_ao_article_order => Artikelreihenfolge
+stm_ao_article_order_saved => Artikelreihenfolge gesichert.
+stm_ao_edit_article => Artikel bearbeiten
+stm_ao_edit_image => Bild bearbeiten
+stm_ao_hide_articles => Artikel ausblenden
+stm_ao_hide_images => Bilder ausblenden
+stm_ao_hints_for_using => Ziehen Sie einen Artikel auf eine neue Position und klicken Sie »Sichern«.<br/>Durch Ziehen in eine andere Sektion ordnen Sie einen Artikel dieser anderen Sektion zu.<br/>Es kann immer nur ein Artikel auf einmal bewegt werden.
+stm_ao_it_s_the_one_above => ES IST DER ARTIKEL OBERHALB.
+stm_ao_oops_push_it_please => UPPS! BITTE EINMAL KURZ ANSTUPSEN. DER ARTIKEL FINDET SICH DANN AM ANFANG DER SEITE.
+stm_ao_optional_warnings => Sollten Sie einen Artikel neben die Liste fallen lassen, finden Sie ihn am unteren Seitenende wieder.
+stm_ao_prefs_h1 => Sektionen in stm_article_order
+stm_ao_prefs_hint => Markieren Sie hier die Sektionen, die Sie im Fenster »<a href="index.php?event=stm_article_order">Artikelreihenfolge</a>« nicht darstellen<br/>möchten, bspw. solche, in denen Artikel nicht manuell sortiert werden sondern automatisch.
+stm_ao_prefs_pagetop => Sektionen in stm_article_order
+stm_ao_save => Sichern
+stm_ao_sections_updated => Auswahl aktualisiert
+stm_ao_show_articles => Artikel einblenden
+stm_ao_show_images => Bilder einblenden
+stm_ao_update => Auswahl aktualisieren
+#@language es
+#@admin-side
+stm_ao_prefs_menuitem => Opciones de stm_ao
+#@stm_ao
+stm_ao_article_order => Orden de artículos
+stm_ao_article_order_saved => Orden de artículos guardado.
+stm_ao_edit_article => Editar artículo
+stm_ao_edit_image => Editar imagen
+stm_ao_hide_articles => Ocultar artículos
+stm_ao_hide_images => Ocultar imágenes
+stm_ao_hints_for_using => Arrastre un artículo hacia una nueva posición y pulse “guardar”.<br/>Al arrastrar a un artículo hacia una nueva sección lo asigna a esa nueva sección.<br/>Puede arrastrar un sólo artículo a la vez.
+stm_ao_it_s_the_one_above => ¡ES EL ARTÍCULO DE ARRIBA!
+stm_ao_oops_push_it_please => ¡UPS! ¡EMPÚJELO POR FAVOR! ENCONTRARÁ AL ARTÍCULO AL TOPE DE LA PÁGINA.
+stm_ao_optional_warnings => En caso de que deje “caer” a un artículo fuera de la lista, lo encontrará al final de la página, resaltado en color naranja.
+stm_ao_prefs_h1 => Secciones en stm_article_order
+stm_ao_prefs_hint => Marque las secciones que no quiere alistar en el panel “<a href="index.php?event=stm_article_order">Orden de artículos</a>”,<br />por ejemplo ésas que son ordenados de manera automática de acuerdo a otros criterios y no pueden ser ordenados manualmente.
+stm_ao_prefs_pagetop => Secciones en stm_article_order
+stm_ao_save => Guardar
+stm_ao_sections_updated => Selección actualizada
+stm_ao_show_articles => Mostrar artículos
+stm_ao_show_images => Mostrar imágenes
+stm_ao_update => Actualizar selección
+#@language fr
+#@admin-side
+stm_ao_prefs_menuitem => Options de stm_ao
+#@stm_ao
+stm_ao_article_order => Ordre (tri) des articles
+stm_ao_article_order_saved => Réorganisation d’article enregistrée.
+stm_ao_edit_article => Modifier l’article
+stm_ao_edit_image => Modifier l’image
+stm_ao_hide_articles => Masquer les articles
+stm_ao_hide_images => Cacher les images
+stm_ao_hints_for_using => Faites glisser un article vers une nouvelle position et cliquez sur "Enregistrer". <br/> En faisant glisser un article vers une autre section, vous pouvez l’assigner à cette section. <br/> Les articles ne peuvent être déplacés qu’un à la fois.
+stm_ao_it_s_the_one_above => C’EST CELUI CI-DESSUS!
+stm_ao_oops_push_it_please => OOPS! POUSSEZ-LE, S’IL VOUS PLAÎT! VOUS LE RETROUVEREZ COMME L’ARTICLE LE PLUS HAUT !
+stm_ao_optional_warnings => Si vous laissez un article aller sous la liste, faites défiler la page vers le bas pour le retrouver.
+stm_ao_prefs_h1 => Sections dans stm_article_order
+stm_ao_prefs_hint => Marquez les sections que vous ne souhaitez pas afficher dans le <a href="index.php?event=stm_article_order"> panneau Ordre (tri) des articles </a>, p. ex. ceux qui trient les articles par d’autres critères que manuellement.
+stm_ao_prefs_pagetop => Sections dans stm_article_order
+stm_ao_save => Sauvegarder
+stm_ao_sections_updated => Sélection mise à jour
+stm_ao_show_articles => Afficher les articles
+stm_ao_show_images => Voir les images
+stm_ao_update => Mettre à jour la sélection
 EOT;
-**/
 // End of textpack
 
 if (!defined('txpinterface'))
