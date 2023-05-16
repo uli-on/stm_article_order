@@ -254,9 +254,13 @@ function stm_article_order(){
                 } else if (is_string($article['Image'])) {
                     $img = explode(",", $article['Image']);
                     if ($img[0]) {
-                        $rs = safe_rows('ext,id', 'txp_image', 'id in ('.$img[0].')');
+                        if(is_numeric($img[0])){
+							$rs = safe_rows('ext,id', 'txp_image', 'id in ('.$img[0].')');
+						} else {
+							$rs = safe_rows('ext,id', 'txp_image', 'name = "'.$img[0].'"');
+						}
                         extract($rs);
-                        $tmp .= '<span class="article_title status_'.$article['Status'].'"><a href="index.php?event=image&amp;step=image_edit&amp;id=' . $img[0] . '" title="'.gTxt("stm_ao_edit_image").' ID ' . $img[0] . '" class="image-edit"><img class="article-img" src="'.hu.$img_dir.'/' . $rs[0]['id'] . 't' . $rs[0]['ext'] . '" /></a>'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
+                        $tmp .= '<span class="article_title status_'.$article['Status'].'"><a href="index.php?event=image&amp;step=image_edit&amp;id=' . $rs[0]['id'] . '" title="'.gTxt("stm_ao_edit_image").' ID ' . $rs[0]['id'] . '" class="image-edit"><img class="article-img" src="'.hu.$img_dir.'/' . $rs[0]['id'] . 't' . $rs[0]['ext'] . '" /></a>'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
                     } else {
                         $tmp .= '<span class="no-image article_title status_'.$article['Status'].'">'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
 					}
