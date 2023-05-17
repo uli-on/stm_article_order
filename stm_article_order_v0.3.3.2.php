@@ -247,25 +247,38 @@ function stm_article_order(){
 				/* [Thanks to MattD and jens31 for the following code block that brings support for PNG + GIF thumbnails.]
 				By using "is_numeric" we can confirm that there is an article id and that the value in that field isn't a url or a list of ids. */
 
-				if(is_numeric($article['Image'])){
-                    $rs = safe_rows('ext,id', 'txp_image', 'id in ('.$article['Image'].')');
-                    extract($rs);
-                    $tmp .= '<span class="article_title status_'.$article['Status'].'"><a href="index.php?event=image&amp;step=image_edit&amp;id=' . $article['Image'] . '" title="'.gTxt("stm_ao_edit_image").' ID ' . $article['Image'] . '" class="image-edit"><img class="article-img" src="'.hu.$img_dir.'/' . $rs[0]['id'] . 't' . $rs[0]['ext'] . '" /></a>'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
-                } else if (is_string($article['Image'])) {
-                    $img = explode(",", $article['Image']);
-                    if ($img[0]) {
-                        if(is_numeric($img[0])){
-							$rs = safe_rows('ext,id', 'txp_image', 'id in ('.$img[0].')');
-						} else {
-							$rs = safe_rows('ext,id', 'txp_image', 'name = "'.$img[0].'"');
-						}
-                        extract($rs);
-                        $tmp .= '<span class="article_title status_'.$article['Status'].'"><a href="index.php?event=image&amp;step=image_edit&amp;id=' . $rs[0]['id'] . '" title="'.gTxt("stm_ao_edit_image").' ID ' . $rs[0]['id'] . '" class="image-edit"><img class="article-img" src="'.hu.$img_dir.'/' . $rs[0]['id'] . 't' . $rs[0]['ext'] . '" /></a>'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
-                    } else {
-                        $tmp .= '<span class="no-image article_title status_'.$article['Status'].'">'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
-					}
-                }
+				// Is there an article image?
+				if(!empty($article['Image'])){
 
+					// is article_image a number?
+					if(is_numeric($article['Image'])){
+						$where = 'id in ('.$article['Image'].')';
+					}
+					// is article_image a string?
+					elseif(is_string($article['Image'])){
+						// split string at commas: is string a list of ID#
+						$img = explode(",", $article['Image']);
+						if(is_numeric($img[0])){
+							$where = 'id in ('.$img[0].')'; // yes: get first ID#
+						} else {
+							$where = 'name = "'.$img[0].'"'; // no: use the image name
+						}
+					}
+				}
+
+				// Retrieve article image
+				if(isset($where)){
+					$rs = safe_rows('ext, id, thumbnail', 'txp_image', $where);
+				}
+
+				// If image exists, show thumbnail (or main image if no thumb available)
+				if (!empty($rs)) {
+					extract($rs);
+					$tmp .= '<span class="article_title status_'.$article['Status'].'"><a href="index.php?event=image&amp;step=image_edit&amp;id=' . $rs[0]['id'] . '" title="'.gTxt("stm_ao_edit_image").' ID ' . $rs[0]['id'] . '" class="image-edit"><img class="article-img" src="'.hu.$img_dir.'/' . $rs[0]['id'] . ($rs[0]['thumbnail'] == "1" ? 't' : '') . $rs[0]['ext'] . '" /></a>'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
+				} else {
+					// no article image
+					$tmp .= '<span class="no-image article_title status_'.$article['Status'].'">'.$article['Title']." <em class='article_id'><a title='".gTxt('stm_ao_edit_article')." ID ".$article['ID']."' href='index.php?event=article&amp;step=edit&amp;ID=".$article['ID']."'>(".$article['ID'].")</a></em></span>";
+				}
 
 				$tmp .= "</li>";
 			}
